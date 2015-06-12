@@ -22,9 +22,12 @@ Woohoo.QuestionController = Ember.ObjectController.extend({
       console.log(question.get('question'))
       question.get('answers').pushObject(newA);
       question.save();
-    }.
-    editAnswer: function() {
-      this.set('isEditingAnswer', true);
+    },
+    delete: function() {
+    	if (confirm('Are you sure?')) {
+    		this.get('model').destroyRecord();
+        this.transitionToRoute('questions')
+    	}
     }
   }
 });

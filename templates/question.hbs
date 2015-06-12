@@ -1,4 +1,3 @@
-<h1>questions</h1>
   {{this.question}}
 <br>
 {{#if isEditing}}
@@ -15,6 +14,7 @@
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 {{/if}}
+<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 <br>
 {{#link-to 'answers'}}Answers{{/link-to}}
 <br>
