@@ -11,6 +11,8 @@ GNU General Public License, version 3 (see below). Copyright (c) 2015 Brent Bail
 **Woohoo Answers**
 
 This app allows users to post, edit, and delete questions and answers to those questions.
+
+(I was in a bit of a hurry so I apologize for its ugliness.)
 ### Author(s)
 
 Brent Bailey
