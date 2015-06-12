@@ -2,6 +2,12 @@ Woohoo.QuestionController = Ember.ObjectController.extend({
   isReplying: false,
   needs: ['question'],
   actions: {
+    edit: function() {
+    this.set('isEditing', true);
+    },
+    save: function() {
+      this.set('isEditing', false);
+    },
     reply: function() {
       this.set('isAnswering', true);
     },
@@ -16,6 +22,9 @@ Woohoo.QuestionController = Ember.ObjectController.extend({
       console.log(question.get('question'))
       question.get('answers').pushObject(newA);
       question.save();
+    }.
+    editAnswer: function() {
+      this.set('isEditingAnswer', true);
     }
   }
 });

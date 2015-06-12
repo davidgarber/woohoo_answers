@@ -1,6 +1,20 @@
 <h1>questions</h1>
   {{this.question}}
 <br>
+{{#if isEditing}}
+  <form>
+    <div class="form-group">
+      <label for="question">Question</label>
+      {{textarea value=question id="question" class="form-control"}}
+    </div>
+
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+{{else}}
+  <p>{{body}}</p>
+
+  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+{{/if}}
 <br>
 {{#link-to 'answers'}}Answers{{/link-to}}
 <br>
@@ -19,3 +33,7 @@
 
 <button class="btn btn-primary" {{action 'reply'}}>Answer</button>
 {{/if}}
+<br>
+<br>
+<br>
+{{#link-to 'questions'}}Home{{/link-to}}
