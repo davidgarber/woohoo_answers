@@ -1,5 +1,5 @@
 Woohoo.QuestionRoute = Ember.Route.extend({
   model: function(params) {
-    return questions.findBy('id', params.question_id);
+    return this.store.find('question', params.question_id);
   }
 });

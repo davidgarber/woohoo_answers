@@ -1,6 +1,4 @@
-Woohoo.questionsController = Ember.ArrayController.extend({
-  sortProperties: ['date:desc'],
-  sortedQuestions: Ember.computed.sort('model', 'sortProperties'),
+Woohoo.QuestionsController = Ember.ArrayController.extend({
   isAsking: false,
   actions: {
     new_question: function() {
@@ -8,12 +6,10 @@ Woohoo.questionsController = Ember.ArrayController.extend({
     },
     post: function() {
       this.set('isAsking', false);
-      questions.addObject({
+      var newQ = this.store.createRecord('question', {
         question: this.get('new_question'),
-        id: (questions.length + 1).toString(),
-        date: new Date,
       });
-      console.log(questions[0]);
+      newQ.save();
     }
   }
 });

@@ -1,7 +1,7 @@
 <h1>Questions</h1>
 
 <ul>
-  {{#each question in sortedquestions}}
+  {{#each question in this}}
   <li>{{#link-to 'question' question.id}}{{question.question}}{{/link-to}}</li>
   {{/each}}
 </ul>
