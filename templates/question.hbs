@@ -16,10 +16,13 @@
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 {{/if}}
 <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
-<div class="button">{{#link-to 'answers'}}View Answers{{/link-to}}</div>
+<br>
+{{#link-to 'answers'}}View Answers{{/link-to}}
 <br>
 {{outlet}}
+<br>
 {{#if isAnswering}}
+<br>
 <form>
   <div class="form-group">
     <label for="answer">Answer</label>
@@ -30,7 +33,6 @@
 
 {{else}}
 <br>
-
 <button class="btn btn-primary" {{action 'reply'}}>Answer</button>
 {{/if}}
 <br>
