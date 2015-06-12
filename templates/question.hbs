@@ -1,4 +1,5 @@
-  {{this.question}}
+<div class="text-center">
+{{this.question}}
 <br>
 {{#if isEditing}}
   <form>
@@ -15,11 +16,9 @@
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 {{/if}}
 <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
-<br>
-{{#link-to 'answers'}}Answers{{/link-to}}
+<div class="button">{{#link-to 'answers'}}View Answers{{/link-to}}</div>
 <br>
 {{outlet}}
-<br>
 {{#if isAnswering}}
 <form>
   <div class="form-group">
@@ -30,6 +29,7 @@
 </form>
 
 {{else}}
+<br>
 
 <button class="btn btn-primary" {{action 'reply'}}>Answer</button>
 {{/if}}
@@ -37,3 +37,4 @@
 <br>
 <br>
 {{#link-to 'questions'}}Home{{/link-to}}
+</div>
