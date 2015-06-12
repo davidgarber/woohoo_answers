@@ -1,5 +1,5 @@
 <div class="text-center">
-{{this.question}}
+<h3>{{this.question}}</h3>
 <br>
 {{#if isEditing}}
   <form>
@@ -17,12 +17,12 @@
 {{/if}}
 <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 <br>
+<br>
 {{#link-to 'answers'}}View Answers{{/link-to}}
 <br>
 {{outlet}}
 <br>
 {{#if isAnswering}}
-<br>
 <form>
   <div class="form-group">
     <label for="answer">Answer</label>

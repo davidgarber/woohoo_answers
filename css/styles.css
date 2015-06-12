@@ -15,3 +15,10 @@
 .woohoo {
 	font-family: yahoo;
 }
+
+.header {
+    height:50px;
+    background:#9900FF;
+    margin:0px auto;
+
+}
