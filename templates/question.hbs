@@ -1,0 +1,21 @@
+<h1>questions</h1>
+  {{this.question}}
+<br>
+<br>
+{{#link-to 'answers'}}Answers{{/link-to}}
+<br>
+{{outlet}}
+<br>
+{{#if isAnswering}}
+<form>
+  <div class="form-group">
+    <label for="answer">Answer</label>
+    {{input id ="answer" class="form-control" value=reply}}
+    <button class="btn btn-primary" {{action 'post'}}>Post</button>
+  </div>
+</form>
+
+{{else}}
+
+<button class="btn btn-primary" {{action 'reply'}}>Answer</button>
+{{/if}}
